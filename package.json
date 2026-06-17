@@ -53,13 +53,16 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "axios": "^1.13.6"
+    "axios": "^1.18.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "globals": "^17.4.0",
+    "globals": "^17.6.0",
     "is-base64": "^1.1.0",
-    "jest": "^30.2.0",
-    "typescript": "^5.9.3"
+    "jest": "^30.4.2",
+    "typescript": "^6.0.3"
+  },
+  "allowScripts": {
+    "unrs-resolver@1.12.2": true
   }
 }
