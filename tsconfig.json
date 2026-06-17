@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "CommonJS",
+    "rootDir": "./src",
     "outDir": "./dist",
     "sourceMap": false,
     "removeComments": true,
@@ -13,7 +14,10 @@
     "noUnusedParameters": true,
     "declaration": true,
     "declarationMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": [
+      "node"
+    ]
   },
   "include": [
     "src"
