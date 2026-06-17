@@ -1,6 +1,6 @@
 {
   "name": "@sefinek/google-tts-api",
-  "version": "2.1.13",
+  "version": "2.1.14",
   "description": "Fast Google TTS (Text-To-Speech) for Node.js. For free without any API keys!",
   "keywords": [
     "cloud",
