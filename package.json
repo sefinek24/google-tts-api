@@ -1,6 +1,6 @@
 {
   "name": "@sefinek/google-tts-api",
-  "version": "2.1.14",
+  "version": "2.1.15",
   "description": "Fast Google TTS (Text-To-Speech) for Node.js. For free without any API keys!",
   "keywords": [
     "cloud",
@@ -53,11 +53,11 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "axios": "^1.18.0"
+    "axios": "^1.18.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "globals": "^17.6.0",
+    "globals": "^17.7.0",
     "is-base64": "^1.1.0",
     "jest": "^30.4.2",
     "typescript": "^6.0.3"
