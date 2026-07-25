@@ -73,18 +73,16 @@ describe('Long Text', () => {
 		// 2. all audio URLs
 		let resultList = googleTTS.getAllAudioUrls(text);
 		expect(resultList.length).toBe(2);
-		expect(resultList.map((item) => item.shortText).join('')).toBe(text);
+		expect(resultList.map(item => item.shortText).join('')).toBe(text);
 		await Promise.all(resultList.map(({ url }) => axios.get(url)));
 
 		// 3. audio base64
-		await expect(() => {
-			return googleTTS.getAudioBase64(text);
-		}).rejects.toThrow(errorMessage);
+		await expect(() => googleTTS.getAudioBase64(text)).rejects.toThrow(errorMessage);
 
 		// 4. all audio base64
 		resultList = await googleTTS.getAllAudioBase64(text);
 		expect(resultList.length).toBe(2);
-		expect(resultList.map((item) => item.shortText).join('')).toBe(text);
+		expect(resultList.map(item => item.shortText).join('')).toBe(text);
 		for (const { base64 } of resultList) {
 			expect(isBase64(base64)).toBe(true);
 		}
@@ -168,18 +166,16 @@ describe('Long Text', () => {
 		// 2. all audio URLs
 		let resultList = googleTTS.getAllAudioUrls(text, option);
 		expect(resultList.length).toBe(2);
-		expect(resultList.map((item) => item.shortText).join('')).toBe(text);
+		expect(resultList.map(item => item.shortText).join('')).toBe(text);
 		await Promise.all(resultList.map(({ url }) => axios.get(url)));
 
 		// 3. audio base64
-		await expect(() => {
-			return googleTTS.getAudioBase64(text, option);
-		}).rejects.toThrow(errorMessage);
+		await expect(() => googleTTS.getAudioBase64(text, option)).rejects.toThrow(errorMessage);
 
 		// 4. all audio base64
 		resultList = await googleTTS.getAllAudioBase64(text, option);
 		expect(resultList.length).toBe(2);
-		expect(resultList.map((item) => item.shortText).join('')).toBe(text);
+		expect(resultList.map(item => item.shortText).join('')).toBe(text);
 		for (const { base64 } of resultList) {
 			expect(isBase64(base64)).toBe(true);
 		}

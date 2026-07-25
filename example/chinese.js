@@ -8,7 +8,7 @@ console.log({ url }); // https://translate.google.com/translate_tts?...
 // 2. Get base64 text
 googleTTS
 	.getAudioBase64('你好世界', { lang: 'zh-TW' })
-	.then((base64) => {
+	.then(base64 => {
 		console.log({ base64 });
 
 		// Save the audio file

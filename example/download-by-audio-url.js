@@ -13,12 +13,12 @@ function downloadFile(url, dest) {
 			host: info.host,
 			path: info.path,
 			headers: {
-				'user-agent': 'WHAT_EVER'
-			}
+				'user-agent': 'WHAT_EVER',
+			},
 		};
 
 		httpClient
-			.get(options, (res) => {
+			.get(options, res => {
 				// Check status code
 				if (res.statusCode !== 200) {
 					const msg = `request to ${url} failed, status code = ${res.statusCode} (${res.statusMessage})`;
@@ -27,11 +27,11 @@ function downloadFile(url, dest) {
 				}
 
 				const file = fs.createWriteStream(dest);
-				file.on('finish', function() {
+				file.on('finish', () => {
 					// close() is async, call resolve after close completes.
 					file.close(resolve);
 				});
-				file.on('error', function(err) {
+				file.on('error', err => {
 					// Delete the file async. (But we don't check the result)
 					fs.unlink(dest);
 					reject(err);
